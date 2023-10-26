@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DH - DISA HOME | CONTACTO </title>
+    <link href="./img/Mail.ico" rel="icon" type="img/x-icon" />
+
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" media="all" href="css/contacto.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="encabez">
+            <div class="head1">
+                <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                    <img src="img/instagram.png" alt="aaa" width="25px"></a>
+                <a href="https://www.facebook.com/" title="" Facebook target="_blank"> <img src="img/facebook.png"
+                        alt="aaa" width="25px"></a>
+                <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank"> <img src="img/whatsapp.png"
+                        alt="aaa" width="25px"></a>
+                <a href="https://www.youtube.com/" title="Youtube" target="_blank"> <img src="img/youtube.png" alt="aaa"
+                        width="25px"></a>
+                <!-- </div>
+            <div class="head1"> -->
+                <!-- <h4> Donde Comprar? | disahome@disahome.com.ar</h4> -->
+                <a href="./contacto.html#Mapas">¿Dónde comprar? | </a>
+                <a href="mailto:info@disahome.com.ar">info@disahome.com.ar</a>
+                <!-- <a href="./index.html"> | Menu </a> -->
+                <!-- </div> -->
+            </div>
+
+            <div class="head1">
+                <div class="grillado2">
+                    <div id="dolarnomb"> </div>
+                    <div id="dolarventa"> </div>
+                    <div id="dolarcomp"> </div>
+                </div>
+            </div>
+
+            <script>
+                async function dolar() {
+                    const apiUSD = "https://www.dolarsi.com/api/api.php?type=valoresprincipales";
+                    const cotizacionDolar = await fetch(apiUSD);
+                    const cotizacionJSON = await cotizacionDolar.json();
+                    //console.log(cotizacionJSON[1].casa.compra)
+                    console.log('Dolar Ctdo con Liqui Compra ', cotizacionJSON[4]?.casa?.compra)
+                    console.log('Dolar Ctdo con Liqui Venta', cotizacionJSON[4]?.casa?.venta)
+                    console.log(cotizacionJSON[4]?.casa?.nombre);
+
+                    document.getElementById("dolarnomb").innerHTML = cotizacionJSON[4]?.casa?.nombre;
+                    document.getElementById("dolarventa").innerHTML = cotizacionJSON[4]?.casa?.compra, cotizacionJSON[4]?.casa?.venta;
+                    document.getElementById("dolarcomp").innerHTML = cotizacionJSON[4]?.casa?.venta;
+
+                }
+
+                dolar();
+            </script>
+
+        </div>
+        <br>
+        <div class="menuretrac">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">CATEGORÍAS</a>
+                    <div class="dropdown-content">
+                        <a href="Categorias.html#lamp">LÁMPARAS LED</a>
+                        <a href="Categorias.html#listones">LISTONES Y TUBOS LED</a>
+                        <a href="Categorias.html#proy">PROYECTORES Y TORTUGAS LED</a>
+                        <a href="Categorias.html#panel">PANELES LED</a>
+                        <a href="Categorias.html#videos">VIDEOS</a>
+                    </div>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="diseño.html">DISEÑOS MODERNOS</a></li>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <hr>
+    <!-- formulario de Contacto -->
+    <div class="container">
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title"> CONTACTO </h3>
+                <p class="text">
+                    Dejanos tu consulta y te responderemos a la brevedad.
+                </p>
+
+                <div class="info">
+                    <div class="information">
+                        <img src="img/location.png" class="icon" alt="" />
+                        <p> Av Córdoba 5623 1° Piso | CABA | Argentina </p>
+                    </div>
+                    <div class="information">
+                        <img src="img/email.png" class="icon" alt="" />
+                        <p> contactoDH@disahome.com.ar </p>
+                    </div>
+                    <div class="information">
+                        <img src="img/phone.png" class="icon" alt="" />
+                        <p> 011-468-7777 </p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <p> Como llegar : </p>
+                    <div class="social-icons">
+                        <iframe id="Mapas"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.6705842034667!2d-58.440318000000005!3d-34.5872009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f32869cae3%3A0x9ea8dfe31874f0ce!2sAv.%20C%C3%B3rdoba%205623%2C%20C1414BBC%20CABA!5e0!3m2!1sen!2sar!4v1695255525862!5m2!1sen!2sar"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- // Formulario de Contacto  -->
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form  id="form" name="contactForm" onsubmit="return validarform()">
+                    <h3 class="title"> Contáctenos aca </h3>
+
+                    <div class="input-container">
+                        <label for='nombre'> </label>
+                        <input id='nombre' type="text" name="nombre" class="input" placeholder="Ingrese Nombre de usuario"
+                            autocomplete="on" />
+
+                        <!-- <span> Username </span> -->
+                    </div>
+
+                    <div class="input-container">
+                        <label for='mail'> </label>
+                        <input id='mail' type="email" name="mail" class="input" placeholder="E-Mail"
+                            autocomplete="on" />
+
+                        <!-- <span> Email </span> -->
+                    </div>
+
+                    <div class="input-container">
+                        <label for='telefono'> </label>
+                        <input id='telefono' type="text" name="telefono" class="input" placeholder="Ingrese Telefono"
+                            autocomplete="on" />
+
+                        <!-- <span> Phone </span> -->
+                    </div>
+
+                    <div class="input-container textarea">
+                        <label for='mensaje'> </label>
+                        <textarea id="mensaje" name="mensaje" class="input" placeholder="Deje su Mensaje..."></textarea>
+
+                        <!-- <span> Message </span>      -->
+                    </div>
+
+                    <!-- <input type=" submit" value="Enviar" class="btn1" onsubmit='return validar()' /> -->
+                    <input type="submit" value="Enviar" class="btn1" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="descarga-catalogo">
+            <a href="./catalogo.html" target="_blank"> <img src="img2/catalogo.png" alt="aaa" width="200px"></a>
+        </div>
+    </section>
+
+    <footer>
+        <br>
+        <div class="piedepagina">
+            <a href=""><img class="pie_log" src="./img/logosmart.png" alt="Logo"></a>
+            <a class="donde">Av Córdoba 5623 1° Piso | CABA | Argentina | </a>
+            <!-- <a class="mail"><a href="mailto:info@disahome.com.ar">info@disahome.com.ar</a> -->
+
+            <a id="izq" href=""><img class="inst" src="./img/whatsapp.png" alt="what"></a>
+            <a href=""><img class="inst" src="./img/facebook2.png" alt="what"></a>
+            <a href=""><img class="inst" src="./img/descarga.png" alt="what"></a>
+
+        </div>
+    </footer>
+
+   <!--  <script src="./js/contacto_v.js"></script> -->
+
+   <script>
+
+    const $form = document.querySelector('#form')
+    console.log('1');
+    $form.addEventListener('submit', validarform)
+    console.log('2');
+    function validarform(event){
+      event.preventdefault()
+      const form = new FormData(this)
+      console.log('3');
+      console.log(form.get('nombre'));
+    }
+
+   </script>
+
+</body>
+
+</html>

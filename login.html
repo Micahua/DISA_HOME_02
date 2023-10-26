@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DH - DISA HOME | LOGIN </title>
+
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" href="img/Logo_DH.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" media="all" href="css/login.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="encabez">
+            <div class="head1">
+                <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                    <img src="img/instagram.png" alt="aaa" width="25px"></a>
+                <a href="https://www.facebook.com/" title="" Facebook target="_blank"> <img src="img/facebook.png"
+                        alt="aaa" width="25px"></a>
+                <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank"> <img src="img/whatsapp.png"
+                        alt="aaa" width="25px"></a>
+                <a href="https://www.youtube.com/" title="Youtube" target="_blank"> <img src="img/youtube.png" alt="aaa"
+                        width="25px"></a>
+                <!-- </div>
+            <div class="head1"> -->
+                <!-- <h4> Donde Comprar? | disahome@disahome.com.ar</h4> -->
+                <a href="./contacto.html#Mapas">¿Dónde comprar? | </a>
+                <a href="mailto:info@disahome.com.ar">info@disahome.com.ar</a>
+                <!-- <a href="./index.html"> | Menu </a> -->
+                <!-- </div> -->
+            </div>
+
+            <div class="head1">
+                <div class="grillado2">
+                    <div id="dolarnomb"> </div>
+                    <div id="dolarventa"> </div>
+                    <div id="dolarcomp"> </div>
+                </div>
+            </div>
+
+            <script>
+                async function dolar() {
+                    const apiUSD = "https://www.dolarsi.com/api/api.php?type=valoresprincipales";
+                    const cotizacionDolar = await fetch(apiUSD);
+                    const cotizacionJSON = await cotizacionDolar.json();
+                    //console.log(cotizacionJSON[1].casa.compra)
+                    console.log('Dolar Ctdo con Liqui Compra ', cotizacionJSON[4]?.casa?.compra)
+                    console.log('Dolar Ctdo con Liqui Venta', cotizacionJSON[4]?.casa?.venta)
+                    console.log(cotizacionJSON[4]?.casa?.nombre);
+
+                    document.getElementById("dolarnomb").innerHTML = cotizacionJSON[4]?.casa?.nombre;
+                    document.getElementById("dolarventa").innerHTML = cotizacionJSON[4]?.casa?.compra, cotizacionJSON[4]?.casa?.venta;
+                    document.getElementById("dolarcomp").innerHTML = cotizacionJSON[4]?.casa?.venta;
+
+                }
+
+                dolar();
+            </script>
+
+        </div>
+        <br>
+        <div class="menuretrac">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">CATEGORÍAS</a>
+                    <div class="dropdown-content">
+                        <a href="Categorias.html#lamp">LÁMPARAS LED</a>
+                        <a href="Categorias.html#listones">LISTONES Y TUBOS LED</a>
+                        <a href="Categorias.html#proy">PROYECTORES Y TORTUGAS LED</a>
+                        <a href="Categorias.html#panel">PANELES LED</a>
+                        <a href="Categorias.html#videos">VIDEOS</a>
+                    </div>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="diseño.html">DISEÑOS MODERNOS</a></li>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- <div class="imgcontainer">
+        <img src="./img/logueo_01.png" width="50px">
+    </div> -->
+    <section>
+        <div class="descarga-catalogo">
+            <a href="./catalogo.html" target="_blank"> <img src="img2/catalogo.png" alt="aaa" width="200px"></a>
+        </div>
+    </section>
+
+    <div class="form-container">
+
+        <form class="form_contact" action="action_page.html" method="post">
+
+            <legend class="title">Iniciar Sesión</legend>
+            <!-- <label class="title2" for="uname"><b>Nombre de usuario</b></label><br> -->
+            <input type="text" placeholder="Ingrese Nombre de usuario" name="uname" required><br>
+
+            <!-- <label class="title2" for="psw"><b>Contraseña</b></label><br> -->
+            <input type="password" placeholder="Ingrese Contraseña" name="psw" required><br>
+
+            <!-- <label class="title2"><b>Recordar la Clave.</b></label>
+            <input class="cheB"  type="checkbox" checked="checked" name="remember"> -->
+            
+            
+            <div><label > Recordar la Clave <input id="lele" type="checkbox" name="remember" checked="checked"></label></div><br><br>
+
+
+            <br>
+            <br>
+            <button class="logueobtn" type="submit">LOGUEO </button>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="container">
+                <button type="button" class="cancelbtn">Cancelar</button>
+                <span class="psw">Olvidó la <a href="#">Clave?</a></span>
+            </div>
+
+        </form>
+        <br>
+        <form class="form_crea_usu" action="action_page.html" method="post">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <legend class="title3">Crear Usuario</legend>
+            <!-- <label class="title4" for="uname"><b>Nombre de usuario</b></label><br> -->
+            <input type="text" placeholder="Ingrese Nombre de usuario" name="uname_1" required><br>
+            <!-- <label class="title4" for="psw"><b>Email</b></label><br> -->
+             <input type="text" placeholder="Ingrese Email" name="email" required> <br>
+            <!-- <label class="title4" for="psw"><b>Contraseña</b></label><br> -->
+            <input type="password" placeholder="Ingrese Contraseña" name="psw_1" required><br>
+            <!-- <label class="title4" for="psw"><b>Repetir Contraseña</b></label><br> -->
+            <input type="password" placeholder="Repita Contraseña" name="psw_2" required><br>
+            <button class="registrobtn" type="submit">REGISTRO </button>
+
+        </form>
+    </div>
+
+    <hr>
+    <footer>
+        <br>
+        <div class="piedepagina">
+            <a href=""><img class="pie_log" src="./img/logosmart.png" alt="Logo"></a>
+            <a class="donde">Av Córdoba 5623 1° Piso | CABA | Argentina | </a>
+            <a id="izq" href=""><img class="inst" src="./img/whatsapp.png" alt="what"></a>
+            <a href=""><img class="inst" src="./img/facebook2.png" alt="what"></a>
+            <a href=""><img class="inst" src="./img/descarga.png" alt="what"></a>
+
+        </div>
+    </footer>
+</body>
+
+</html>

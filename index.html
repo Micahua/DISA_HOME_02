@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DH - DISA HOME | INFORMACIÓN TÉCNICA - akaienergy.com.ar </title>
+
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <link rel="icon" href="img/Logo_DH.ico" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" media="all" href="css/estilos.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <div class="encabez">
+            <div class="head1">
+                <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                    <img src="img/instagram.png" alt="aaa" width="25px"></a>
+                <a href="https://www.facebook.com/" title="" Facebook target="_blank"> <img src="img/facebook.png"
+                        alt="aaa" width="25px"></a>
+                <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank"> <img src="img/whatsapp.png"
+                        alt="aaa" width="25px"></a>
+                <a href="https://www.youtube.com/" title="Youtube" target="_blank"> <img src="img/youtube.png" alt="aaa"
+                        width="25px"></a>
+                <!-- </div>
+            <div class="head1"> -->
+                <!-- <h4> Donde Comprar? | disahome@disahome.com.ar</h4> -->
+                <a href="./contacto.html#Mapas">¿Dónde comprar? | </a>
+                <a href="mailto:info@disahome.com.ar">info@disahome.com.ar</a>
+                <!-- <a href="./index.html"> | Menu </a> -->
+                <!-- </div> -->
+            </div>
+
+            <div class="head1">
+                <div class="grillado2">
+                    <div id="dolarnomb"> </div>
+                    <div id="dolarventa"> </div>
+                    <div id="dolarcomp"> </div>
+                </div>
+            </div>
+
+            <script>
+                async function dolar() {
+                    const apiUSD = "https://www.dolarsi.com/api/api.php?type=valoresprincipales";
+                    const cotizacionDolar = await fetch(apiUSD);
+                    const cotizacionJSON = await cotizacionDolar.json();
+                    //console.log(cotizacionJSON[1].casa.compra)
+                    console.log('Dolar Ctdo con Liqui Compra ', cotizacionJSON[4]?.casa?.compra)
+                    console.log('Dolar Ctdo con Liqui Venta', cotizacionJSON[4]?.casa?.venta)
+                    console.log(cotizacionJSON[4]?.casa?.nombre);
+
+                    document.getElementById("dolarnomb").innerHTML = cotizacionJSON[4]?.casa?.nombre;
+                    document.getElementById("dolarventa").innerHTML = cotizacionJSON[4]?.casa?.compra, cotizacionJSON[4]?.casa?.venta;
+                    document.getElementById("dolarcomp").innerHTML = cotizacionJSON[4]?.casa?.venta;
+
+                }
+
+                dolar();
+            </script>
+
+        </div>
+        <br>
+        <div class="menuretrac">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">CATEGORÍAS</a>
+                    <div class="dropdown-content">
+                        <a href="Categorias.html#lamp">LÁMPARAS LED</a>
+                        <a href="Categorias.html#listones">LISTONES Y TUBOS LED</a>
+                        <a href="Categorias.html#proy">PROYECTORES Y TORTUGAS LED</a>
+                        <a href="Categorias.html#panel">PANELES LED</a>
+                        <a href="Categorias.html#videos">VIDEOS</a>
+                    </div>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="diseño.html">DISEÑOS MODERNOS</a></li>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <hr>
+    <!-- <a href=""><img src="./img/ledbanner-home.jpg" alt="Logo"></a> -->
+    <main>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/ledbanner-home.jpg" class="d-block w-100" alt="...">
+
+                    <div class="carousel-caption d-none d-md-block" id="otras">
+                        <h5>Atención Personal</h5>
+                        <p>Con quienes nos comunicamos en lo cotidiano, conocen como trabajamos y nuestro concepto en
+                            venta de productos.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/paneles-banner-home.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block" id="alianzas">
+                        <h5>Calidad Asegurada</h5>
+                        <p>Hemos hecho alianzas con nuestros proveedores que comparten
+                            nuestra filosofía y concepto de calidad.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/2020.07.23-vintage-banner-home.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block" id="otras">
+                        <h5>La División de iluminación LED</h5>
+                        <p>La empresa fija surumbo hacia el desarrollo técnico e industrial con ambiciones de excelencia
+                            a nivel de producto.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <section>
+            <div class="descarga-catalogo">
+                <a href="./catalogo.html" target="_blank"> <img src="img2/catalogo.png" alt="aaa" width="200px"></a>
+            </div>
+        </section>
+    </main>
+    <div class="poscarousel">
+        <p> Con quienes nos comunicamos en lo cotidiano, conocen como trabajamos y nuestro concepto en venta de
+            productos,
+            que es y seguirá siendo el mismo, está muy ligado con nuestro compromiso de brindarle al cliente un producto
+            excelente a un precio justo.
+            Del mismo modo hemos hecho alianzas con nuestros proveedores quienes son empresas excelentes y que comparten
+            nuestra filosofía y concepto de calidad,
+            la cual se logra en base a tres puntos fundamentales: baja temperatura de funcionamiento, alta eficiencia
+            energética y gran durabilidad.
+            La División de iluminación LED, en nuestra empresa continúa siendo nuestro negocio principal.
+            Pero en este último año la empresa fija su rumbo hacia el desarrollo técnico e industrial con ambiciones de
+            excelencia a nivel de producto.
+        </p>
+    </div>
+    <footer>
+        <br>
+        <div class="piedepagina">
+            <a href=""><img class="pie_log" src="./img/logosmart.png" alt="Logo"></a>
+            <a class="donde">Av Córdoba 5623 1° Piso | CABA | Argentina | </a>
+            <!-- <a class="mail"><a href="mailto:info@disahome.com.ar">info@disahome.com.ar</a> -->
+
+            <a id="izq" href=""><img class="inst" src="./img/whatsapp.png" alt="what"></a>
+            <a href=""><img class="inst" src="./img/facebook2.png" alt="what"></a>
+            <a href=""><img class="inst" src="./img/descarga.png" alt="what"></a>
+
+        </div>
+    </footer>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

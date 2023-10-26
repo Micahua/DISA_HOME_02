@@ -1,0 +1,507 @@
+/* Header */
+.encabez {
+  display: grid;
+  grid-template-columns: auto auto ; 
+  text-align:left; 
+}
+
+.head1 {
+    background-color: rgb(247, 242, 242);
+    height: 40px;
+    color: rgb(10, 9, 9);
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 15%;
+  }
+
+  .grillado2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 0%;
+  }
+
+  
+.donde {
+  padding-left: 15%;
+  color: white;
+  text-decoration: none;  
+}
+
+.head1 .img_log{
+  height:38px;  
+  padding-left: 0%;
+  /* display: flex;
+  justify-content:left; */
+}
+.head1 #izq {
+  padding-left: 15%;
+}
+
+.inst {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* Menu_retractil */
+
+/* ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ef0808;
+}
+
+li {
+  float: left;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(235, 101, 101);
+}
+
+li.dropdown {
+  display: inline-block;
+} */
+
+/* Agrego  */ 
+
+/* Menuretractil */
+/*
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ef0808;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(235, 101, 101);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:  rgb(235, 101, 101);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(243, 236, 236);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;
+  color: rgb(20, 19, 19);}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ef0808;
+}
+
+li {
+  float: left;
+}
+
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* .menuretrac li a:hover, */
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(235, 101, 101);
+  color: white;  
+  display: inline-block; 
+}
+
+ li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;  
+  position:fixed;
+  background-color:  rgb(235, 101, 101);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(243, 236, 236);
+  padding: 15px 16px;
+  text-decoration: none; 
+   display: inline-block;
+  text-align:left;  
+} 
+
+.dropdown-content a:hover {background-color: #f1f1f1;
+  color: rgb(20, 19, 19);}
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .descarga-catalogo {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    top: 30px;
+  }
+
+/* logueo */
+/* Ajusta el tamaño de los formularios para hacer que queden uno al lado del otro */
+.form-container {
+  display: flex;
+  /* display: contents; */
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3.5%;    
+}
+
+.form-container form {
+  padding: 0.5% 2%;
+  background-color: rgb(235, 101, 101);
+  /* width: 47%;  */
+  /*Establece el ancho de cada formulario */
+  position: relative;  
+}
+
+/* legend {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;   
+} */
+
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+  padding: 10px;
+}
+
+.form-container .form_contact {
+  /* background-color: #fff;
+  padding: 2.3rem 2.2rem;
+  position: relative; */
+  /* width: 100%;
+  height: 500px;
+  max-width: 620px; */
+  width: 800%;
+  max-width: 420px;
+  height: 450px;
+  background-color: #fff;
+  align-self: baseline;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  /* display: grid; */
+  grid-template-columns: repeat(1, 0.9fr);
+
+}
+
+.form_contact input {
+  /*  display: flex;*/
+  color: #c01a1a;
+  align-items: center;
+  font-size: 0.95rem;
+  /* } */
+
+  /* .input { */
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6rem 1.2rem;
+  /* color: #fff; */
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.form_contact input[type=text]{
+  width: 100%;
+
+}
+
+
+.form_contact .title {
+  color: #c01a1a;
+  padding: 10px 120px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;   
+}
+
+.form_contact .title2 {
+  color: #c01a1a;
+
+}
+
+.circle {
+  border-radius: 50%;
+  background: linear-gradient(135deg, transparent 20%, #c01a1a);
+  position: absolute;
+}
+
+.circle.one {
+  width: 130px;
+  height: 130px;
+  top: 130px;
+  right: -40px;
+}
+
+.circle.two {
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  right: 30px;
+}
+
+.form-container .form_crea_usu {
+  /* width: 100%;
+  max-width: 620px;
+  height: 500px; */
+  width: 800%;
+  max-width: 420px;
+  height: 450px;
+  background-color: rgb(235, 101, 101);
+  align-self: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  /* display: grid; */
+  grid-template-columns: repeat(1, 0.9fr);  
+}
+
+.form_crea_usu .title {
+  color: #c01a1a;
+  padding: 10px 120px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;  
+}
+
+.form_crea_usu .title2 {
+  color: #c01a1a;
+}
+
+.form_crea_usu .title3 {
+  color: #fafafa;
+  padding: 10px 120px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;   
+}
+
+.form_crea_usu .title4 {
+  color: #fafafa; 
+  border: none;
+  cursor: pointer;
+}
+
+.form_crea_usu input {
+  /* display: flex; */
+  color: #fafafa; 
+  font-size: 0.95rem; 
+  font-weight: 500;
+  font-size: 0.95rem;
+  width: 100%;
+  outline: none;
+  border: 2px solid #fafafa;
+  background: none;
+  padding: 0.6rem 1.2rem;   
+  align-items: center;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+/* .form_contact .cheB input{
+  align-items:first baseline;
+} */
+
+.form_crea_usu ::placeholder {
+  color: #d6cfcf; 
+}
+
+/* Full-width inputs */
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #c01a1a;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;  
+  border: none;
+  border-radius: 7em;  
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.7;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 30px;
+  background-color:#c01a1a;  
+  border-radius: 7em;
+}
+
+.logueobtn {
+  width: auto;
+  padding: 10px 100px;
+  margin-left: 15%;
+  margin-top: 4.5%;
+  background-color:#c01a1a;
+  border-radius: 7em;
+}
+
+.registrobtn {
+  width: auto;
+  /* padding: 10px 30px; */
+  padding: 10px 70px;
+  margin-left: 25%;
+  margin-top: 10%;
+  background-color:#c01a1a;
+  border-radius: 7em;  
+}
+
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 10px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* footer */
+.piedepagina {
+  background-color: gray;
+  height: 40px;
+  color: white;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.piedepagina .pie_log {
+  height: 38px;
+}
+
+/* .mail{
+  padding-left: 15%;
+} */
+
+.piedepagina #izq_pie {
+  padding-left: 15%;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+.inline-container {
+  display: flex;
+  align-items: center;
+}
+
+
+  .cancelbtn {
+    width: 100%;
+  }
+}

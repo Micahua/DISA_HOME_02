@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DH - DISA HOME | INFORMACIÓN TÉCNICA - akaienergy.com.ar </title>
+
+    <link rel="icon" href="img/Logo_DH.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/Categorias.css">
+    <!-- Pego el Kit Code que me genera Fontawesome -->
+    <!-- <script src="https://kit.fontawesome.com/77d667ecb9.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./img2/ Lamparita.ico"> -->
+</head>
+
+<body id="arriba">
+    <header>
+        <div class="encabez">
+            <div class="head1">
+                <a href="https://www.instagram.com/" title="Instagram" target="_blank">
+                    <img src="img/instagram.png" alt="aaa" width="25px"></a>
+                <a href="https://www.facebook.com/" title="" Facebook target="_blank"> <img src="img/facebook.png"
+                        alt="aaa" width="25px"></a>
+                <a href="https://www.whatsapp.com/" title="whatsapp" target="_blank"> <img src="img/whatsapp.png"
+                        alt="aaa" width="25px"></a>
+                <a href="https://www.youtube.com/" title="Youtube" target="_blank"> <img src="img/youtube.png" alt="aaa"
+                        width="25px"></a>
+                <!-- </div>
+            <div class="head1"> -->
+                <!-- <h4> Donde Comprar? | disahome@disahome.com.ar</h4> -->
+                <a href="./contacto.html#Mapas">¿Dónde comprar? | </a>
+                <a href="mailto:info@disahome.com.ar">info@disahome.com.ar</a>
+                <!-- <a href="./index.html"> | Menu </a> -->
+                <!-- </div> -->
+            </div>
+
+            <div class="head1">
+                <div class="grillado2">
+                    <div id="dolarnomb"> </div>
+                    <div id="dolarventa"> </div>
+                    <div id="dolarcomp"> </div>
+                </div>
+            </div>
+
+            <script>
+                async function dolar() {
+                    const apiUSD = "https://www.dolarsi.com/api/api.php?type=valoresprincipales";
+                    const cotizacionDolar = await fetch(apiUSD);
+                    const cotizacionJSON = await cotizacionDolar.json();
+                    //console.log(cotizacionJSON[1].casa.compra)
+                    console.log('Dolar Ctdo con Liqui Compra ', cotizacionJSON[4]?.casa?.compra)
+                    console.log('Dolar Ctdo con Liqui Venta', cotizacionJSON[4]?.casa?.venta)
+                    console.log(cotizacionJSON[4]?.casa?.nombre);
+
+                    document.getElementById("dolarnomb").innerHTML = cotizacionJSON[4]?.casa?.nombre;
+                    document.getElementById("dolarventa").innerHTML = cotizacionJSON[4]?.casa?.compra, cotizacionJSON[4]?.casa?.venta;
+                    document.getElementById("dolarcomp").innerHTML = cotizacionJSON[4]?.casa?.venta;
+
+                }
+
+                dolar();
+            </script>
+
+        </div>
+        <br>
+        <div class="menuretrac">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">CATEGORÍAS</a>
+                    <div class="dropdown-content">
+                        <a href="Categorias.html#lamp">LÁMPARAS LED</a>
+                        <a href="Categorias.html#listones">LISTONES Y TUBOS LED</a>
+                        <a href="Categorias.html#proy">PROYECTORES Y TORTUGAS LED</a>
+                        <a href="Categorias.html#panel">PANELES LED</a>
+                        <a href="Categorias.html#videos">VIDEOS</a>
+                    </div>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="diseño.html">DISEÑOS MODERNOS</a></li>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="contarriba">
+            <!-- <span>Volver Arriba</span>   -->
+
+            <!-- <button type="button" class="btn btn4" href="./Categorias.html#arriba">Volver Arriba</button>
+            -->
+
+            <a href="./Categorias.html#arriba" class="btn btn4"> Volver Arriba </a>
+
+            <!-- <a href="Categorias.html#arriba">Volver Arriba</a> -->
+        </div>
+
+        <div class="lampakay">
+            <h1>LÁMPARAS LED</h1>
+            <img src="./img2/logo-akai-smart.png" alt="Logo Akai" width="150px">
+
+        </div>
+
+        <div class="grillado">
+            <div class="lamparas">
+                <img src="./img2/02-lamparas-bulbo_6w_a_18w.jpg" alt="Lámpara Bulbo" width="150px">
+                <div class="info">
+                    <p>LÁMPARA BULBO</p>
+                </div>
+                <!-- class="lampbul" -->
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 6W A 18W </p>
+                </div>
+            </div>
+            <div class="lamparas">
+                <img src="./img2/03-lamparas-gota-y-vela_4w_a_5w.jpg" alt="Lámpara Gota" width="150px">
+                <div class="info">
+                    <p>LÁMPARA GOTA Y VELA</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 4W A 5W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/04-lamparas-cilindricas_5w_a_8w.jpg" alt="Lámpara Cilíndricas" width="150px">
+                <div class="info">
+                    <p>LÁMPARA CILÍNDRICA</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 5W A 8W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/05-lamparas-G9-y-perfume-e14.jpg" alt="Lámpara Perfume" width="150px">
+                <div class="info">
+                    <p>LÁMPARA G9 Y PERFUME E14</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 1,8W A 7W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/06-lamparas-dicro-y-ar111.jpg" alt="Lámpara Dicro" width="150px">
+                <div class="info">
+                    <p>LÁMPARA DICRO Y AR111</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 5W A 15W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/07-linea-emergency.jpg" alt="Lámpara Emergency" width="150px">
+                <div class="info">
+                    <p>LÁMPARAS LÍNEA EMERGENCY</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 8W,10W y 12W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/08-lamparas-vintage.jpg" alt="Lámpara Vintage" width="150px">
+                <div class="info">
+                    <p>LÁMPARAS VINTAGE</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 4W A 7W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/09-lamparas-globo.jpg" alt="Lámpara Glogo" width="150px">
+                <div class="info">
+                    <p>LÁMPARAS GLOBO</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 12W A 15W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/10-lamparas-par-3038.jpg" alt="Lámpara Par" width="150px">
+                <div class="info">
+                    <p>LÁMPARAS PAR3 0-38</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 10W A 16W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/11-lamparas-serie-t-carcaza-termoplastica-y-aluminio.jpg" alt="Lámpara Carcaza"
+                    width="150px">
+                <div class="info">
+                    <p>LÁMPARAS SERIE T CARCAZA</p>
+                    <P>TERMOPLÁSTICA Y ALUMINIO</P>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 25W A 65W </p>
+                </div>
+            </div>
+            <div class="lamparas">
+                <img src="./img2/12-lamparas-low-bay.jpg" alt="Lámpara low Bay" width="150px">
+                <div class="info">
+                    <p>LÁMPARAS LOW BAY</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 60W A 120W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/13-lamparas-magnolia.jpg" alt="Lámpara Magnolia" width="150px">
+                <div class="info">
+                    <p>LÁMPARAS MAGNOLIA</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 36W A 55W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img2/14-lamparas-alumbrado-publico.jpg" alt="Lámpara Alumnbrado Publico" width="150px">
+                <div class="info">
+                    <p>LÁMPARAS ALUMBRADO PÚBLICO</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 36W A 45W </p>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <!-- Listones y tubos Led -->
+        <div class="lampakay">
+            <h1 id="listones">LISTONES Y TUBOS LED</h1>
+            <img src="./img2/logo-akai-smart.png" alt="Logo Akai" width="150px">
+            <!-- <a href="./Categorias.html#arriba"> | Arriba </a> -->
+        </div>
+        <div class="grillado">
+            <div class="lamparas">
+                <img src="./img/15-luminaria-de-emergencia.jpg" alt="Luminaria de Emergencia" width="150px">
+                <div class="info">
+                    <p>LUMINÁRIA DE EMERGENCIA</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> Línea Emergency </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img/16-Tubos-de-led-t8.jpg" alt="Tubos Led" width="150px">
+                <div class="info">
+                    <p>TUBOS DE LED T8</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 8W A22W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img/17-Tubos-de-vidrio-led-t8.jpg" alt="Tubos de Vidrio" width="150px">
+                <div class="info">
+                    <p>TUBOS DE VIDRIO LED T8</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 18W A 40W </p>
+                </div>
+            </div>
+            <div class="lamparas">
+                <img src="./img/18-Tubos-de-led-t8-nano-pc.jpg" alt="Tubos de Led" width="150px">
+                <div class="info">
+                    <p>TUBOS DE LED T8 NANO PC</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 18W A 24W </p>
+                </div>
+            </div>
+            <div class="lamparas">
+                <img src="./img/19-Listones-t5-de-policarbonato-con-interruptor.jpg" alt="Tubos Listones" width="150px">
+                <div class="info">
+                    <p>LISTONES T5 DE POLICARBONATO CON INTERRUPTOR</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 9W A 18W </p>
+                </div>
+            </div>
+            <div class="lamparas">
+                <img src="./img/20-Artefactos-estancos.jpg" alt="Artefacto Estancos" width="150px">
+                <div class="info">
+                    <p>ARTEFACTOS ESTANCOS</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 18W A 48W </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <!-- Proyectores y tortugas -->
+        <div class="lampakay">
+            <h1 id="proy">PROYECTORES Y TORTUGAS LED</h1>
+            <img src="./img2/logo-akai-smart.png" alt="Logo Akai" width="150px">
+            <!-- <a href="./Categorias.html#arriba"> | Arriba </a> -->
+        </div>
+        <div class="grillado">
+            <div class="lamparas">
+                <img src="./img/21-Proyectores-prolite.jpg" alt="Proyectores Prolite" width="150px">
+                <div class="info">
+                    <p>PROYECTORES PROLITE</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 10W A 200W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img/22-Proyector-led-color.jpg" alt="Proyector Led 22-Proyector-led-color" width="150px">
+                <div class="info">
+                    <p>PROYECTOR LED COLR PROLITE</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 50W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img/23-Proyector-led-con-sensor-de-movimiento.jpg" alt="Proyector con sensor" width="150px">
+                <div class="info">
+                    <p>PROYECTOR LED CON SENSOR DE MOVIMIENTO</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 10W A 50W </p>
+                </div>
+            </div>
+            <div class="lamparas">
+                <img src="./img/24-Tortugas-led.jpg" alt="Tortugas" width="150px">
+                <div class="info">
+                    <p>TORTUGAS LED</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 8W A 24W </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paneles LED -->
+        <div class="lampakay">
+            <h1 id="panel">PANELES LED</h1>
+            <img src="./img2/logo-akai-smart.png" alt="Logo Akai" width="150px">
+            <!-- <a href="./Categorias.html#arriba"> | Arriba </a> -->
+        </div>
+        <div class="grillado">
+            <div class="lamparas">
+                <img src="./img/25-Paneles-backlight-design.jpg" alt="Paneles Backlight" width="150px">
+                <div class="info">
+                    <p>PANELES BACKLIGHT DESIGN</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 48W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img/26-Paneles-embutidos-led-aluminio-inyectado.jpg" alt="Paneles Embutidos" width="150px">
+                <div class="info">
+                    <p>PANELES EMBUTIDOS LED ALUMINIO INYECTADO</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 50W </p>
+                </div>
+            </div>
+
+            <div class="lamparas">
+                <img src="./img/27-Plafones-led-aluminio-inyectado.jpg" alt="Plafones Led" width="150px">
+                <div class="info">
+                    <p>PLAFONES LED ALUMINIO INYECTADO</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 6W A 24W </p>
+                </div>
+            </div>
+            <div class="lamparas">
+                <img src="./img/28-Paneles-backlight.jpg" alt="Paneles backlight" width="150px">
+                <div class="info">
+                    <p>PANELES BACKLIGHT</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 48W </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIDEOS -->
+        <div class="lampakay">
+            <h1 id="videos">VIDEOS</h1>
+            <img src="./img2/logo-akai-smart.png" alt="Logo Akai" width="150px">
+            <!-- <a href="./Categorias.html#arriba"> | Arriba </a> -->
+        </div>
+        <div class="grillado">
+            <div class="lampvideo">
+                <video width="320" height="240" controls>
+                    <source src="./media/01-FL 250 Proyectores led Alta Potencia de 250w.mp4" type="video/mp4">">
+                </video>
+                <div class="info">
+                    <p>PROYECTORES DE ALTA POTENCIA</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 250W </p>
+                </div>
+            </div>
+
+            <div class="lampvideo">
+                <video width="320" height="240" controls>
+                    <source src="./media/02- 7653 Proyectores led  de Aluminio Inyectado de 100 a 200w.mp4"
+                        type="video/mp4">
+                </video>
+
+                <div class="info">
+                    <p>PROYECTORES LED DE ALUMINIO INYECTADO</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 100W A 200W </p>
+                </div>
+            </div>
+
+            <div class="lampvideo">
+                <video width="320" height="240" controls>
+                    <source src="./media/03-Proyectores led  de Aluminio Inyectado de 100 a 200w.mp4" type="video/mp4">
+                </video>
+                <div class="info">
+                    <p>PROYECTORES LED DE ALUMINIO INYECTADO</p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 100W A 200W </p>
+                </div>
+            </div>
+            <div class="lampvideo">
+                <video width="320" height="240" controls>
+                    <source src="./media/04-Proyectores led Alta Potencia de 250 a 600w..mp4" type="video/mp4">
+                </video>
+                <div class="info">
+                    <p>PROYECTOR LED DE ALTA POTENCIA/p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 250W A 600W </p>
+                </div>
+            </div>
+
+            <div class="lampvideo">
+                <video width="320" height="240" controls>
+                    <source src="./media/05-Proyectores led color Rojo, Verde, Azul y Amarillo - Akai Energy.mp4"
+                        type="video/mp4">
+                </video>
+                <div class="info">
+                    <p>PROYECTOR LED COLOR ROJO,VERDE,AZUL Y AMARILLO/p>
+                </div>
+                <div style="color:black; background-color: #e5272e; width: 60%; margin-left: 20%;">
+                    <p> 250W A 600W </p>
+                </div>
+            </div>
+
+            <div class="lampvideo">
+                <video width="320" height="240" controls>
+                    <source src="./media/Presentacion.mp4" type="video/mp4">
+                </video>
+                <div class="info">
+                    <p>PRESENTACION</p>
+                    <p> </p>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="descarga-catalogo">
+                <a href="./catalogo.html" target="_blank"> <img src="img2/catalogo.png" alt="aaa" width="200px"></a>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <br>
+        <div class="piedepagina">
+            <a href=""><img class="pie_log" src="./img/logosmart.png" alt="Logo"></a>
+            <a class="donde">Av Córdoba 5623 1° Piso | CABA | Argentina | </a>
+            <!-- <a class="mail"><a href="mailto:info@disahome.com.ar">info@disahome.com.ar</a> -->
+
+            <a id="izq" href=""><img class="inst" src="./img/whatsapp.png" alt="what" width="30px" height="30px"></a>
+            <a href=""><img class="inst" src="./img/facebook2.png" alt="what" width="30px" height="30px"></a>
+            <a href=""><img class="inst" src="./img/descarga.png" alt="what" width="30px" height="30px"></a>
+
+        </div>
+    </footer>
+</body>
+
+</html>
